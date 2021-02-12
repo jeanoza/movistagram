@@ -7,6 +7,7 @@ import Poster from "Components/Poster";
 import { Helmet } from "react-helmet";
 
 const Container = styled.div`
+  width: 100%;
   padding: 20px;
 `;
 
@@ -70,7 +71,6 @@ const TVPresenter = ({ topRated, popular, airingToday, loading, error }) => (
         {error && <Message color="#ee5253" text={error} />}
       </Container>
     )}
-    ;
   </>
 );
 

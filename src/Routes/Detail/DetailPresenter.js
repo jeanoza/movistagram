@@ -20,13 +20,13 @@ const Cover = styled.div`
   background-image: url(${(props) => props.bgImage});
   background-size: cover;
   background-position: center center;
-  width: 30%;
-  height: 100%;
+  width: 50%;
+  height: 80%;
   border-radius: 15px;
 `;
 
 const Data = styled.div`
-  width: 70%;
+  width: 50%;
   margin-left: 10px;
 `;
 
@@ -45,7 +45,7 @@ const Overview = styled.p`
   font-size: 12px;
   opacity: 0.8;
   line-height: 1.5;
-  width: 50%;
+  width: 100%;
 `;
 
 const Backdrop = styled.div`

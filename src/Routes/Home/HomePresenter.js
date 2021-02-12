@@ -7,6 +7,8 @@ import Message from "Components/Message";
 import Poster from "Components/Poster";
 
 const Container = styled.div`
+  position: absolute;
+  width: 100%;
   padding: 20px;
 `;
 
