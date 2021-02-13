@@ -19,10 +19,6 @@ const Header = styled.header`
   box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, 0.8);
 `;
 
-const Main = styled.div`
-  font-size: 28px;
-`;
-
 const List = styled.ul`
   display: flex;
 `;
@@ -42,7 +38,6 @@ const SLink = styled(Link)`
 
 export default withRouter(({ location: { pathname } }) => (
   <Header>
-    {/* <Main>Movistagram</Main> */}
     <List>
       <Item current={pathname === "/"}>
         <SLink to="/">Movies</SLink>

@@ -13,7 +13,7 @@
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.1",
+    "react-scripts": "^4.0.2",
     "styled-components": "^5.2.1",
     "styled-reset": "^4.3.4",
     "web-vitals": "^0.2.4"
@@ -28,11 +28,19 @@
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
+      "react-app"
+    ],
+    "overrides":[
+      {
+        "files": [
+          "src/**/*.js"
+        ],
+        "rules" : {
+           "import/no-anonymous-default-export":"off" 
+        }
+      }
     ]
   },
-  "homepage":"https://jeanoza.github.io/movistagram",
   "browserslist": {
     "production": [
       ">0.2%",

@@ -26,18 +26,18 @@ Project for learning React and ES6 by building a Movie Discovery App with the In
 - [ ] IMDB Link
 - [ ] Tabs inside of Movie / Show Details (YT Videos, Production Company & Countries)
 - [ ] Collections Link
-- [ ] /collections Route
+- [ ] Collections Route
 - [ ] On TV Show, show seasons and creators
 
 ## Class component -> React Hook
 
-- [ ] Movie
-- [ ] TV
-- [ ] Search
-- [ ] Detail
-- [ ] Title : Helmet -> useTitle(Hook)
+- [x] Movie
+- [x] TV
+- [x] Search
+- [x] Detail
+- [ ] Title : Helmet -> useTitle(with Hook)
 
-## Instagram Styling add
+## Instagram Styling to add
 
 - [ ] Font
 - [ ] Background form
