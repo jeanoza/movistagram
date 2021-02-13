@@ -2,6 +2,8 @@
 
 Project for learning React and ES6 by building a Movie Discovery App with the Instagram styling.
 
+Github Page : https://jeanoza.github.io/movistagram/
+
 ## Screens(Routes)
 
 - [x] Home
