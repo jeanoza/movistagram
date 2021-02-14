@@ -37,7 +37,7 @@ Github Page : https://jeanoza.github.io/movistagram/
 - [x] TV
 - [x] Search
 - [x] Detail
-- [ ] Title : Helmet -> useTitle(with Hook)
+- [ ] Title(Helmet -> document.title) : but to change if better method(like with useEffect...)
 
 ## Instagram Styling to add
 

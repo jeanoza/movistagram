@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Loader from "Components/Loader";
 import Section from "Components/Section";
 import Poster from "Components/Poster";
+import TitlePut from "Components/TitlePut";
 import { moviesApi } from "api";
 
 const Container = styled.div`
@@ -83,6 +84,7 @@ const Home = () => {
           />
         ))}
       </Section>
+      <TitlePut title="Movies | Movistagram" />
     </Container>
   );
 };

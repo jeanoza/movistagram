@@ -2,6 +2,7 @@ import Loader from "Components/Loader";
 import styled from "styled-components";
 import { moviesApi, tvApi } from "api";
 import React, { useState, useEffect } from "react";
+import TitlePut from "Components/TitlePut";
 
 const Container = styled.div`
   height: calc(100vh - 50px);
@@ -35,9 +36,19 @@ const Title = styled.h3`
   margin-bottom: 10px;
 `;
 const ItemContainer = styled.div`
+  display: flex;
+  align-items: center;
   margin: 20px 0px;
 `;
 const Item = styled.span``;
+const ImdbImg = styled.div`
+  background-image: url("http://img4.wikia.nocookie.net/__cb20130124112826/logopedia/images/8/8e/IMDB.png");
+  background-size: cover;
+  background-position: center center;
+  width: 40px;
+  height: 16px;
+  display: inline-block;
+`;
 const Divider = styled.span`
   margin: 0px 10px;
 `;
@@ -60,7 +71,6 @@ const Backdrop = styled.div`
   filter: blur(3px);
   opacity: 0.5;
 `;
-
 const Detail = (props) => {
   const {
     location: { pathname },
@@ -100,6 +110,7 @@ const Detail = (props) => {
     };
     getDetail();
   }, []);
+
   return loading ? (
     <Loader />
   ) : (
@@ -136,10 +147,27 @@ const Detail = (props) => {
                     : `${genre.name} / `
                 )}
             </Item>
+            {isMovie && (
+              <div>
+                <Divider>#</Divider>
+                <Item>
+                  <a href={`https://www.imdb.com/title/${result.imdb_id}`}>
+                    <ImdbImg />
+                  </a>
+                </Item>
+              </div>
+            )}
           </ItemContainer>
           <Overview>{result.overview}</Overview>
         </Data>
       </Content>
+      <TitlePut
+        title={
+          result.title
+            ? (document.title = result.title)
+            : (document.title = result.name)
+        }
+      ></TitlePut>
     </Container>
   );
 };

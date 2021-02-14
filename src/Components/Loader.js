@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import TitlePut from "Components/TitlePut";
 
 const Container = styled.div`
   height: 100vh;
@@ -15,5 +16,6 @@ export default () => (
     <span role="img" aria-label="Loading">
       ⏰
     </span>
+    <TitlePut title="Loading..." />
   </Container>
 );

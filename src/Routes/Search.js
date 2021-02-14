@@ -5,6 +5,7 @@ import Loader from "Components/Loader";
 import Section from "Components/Section";
 import Poster from "Components/Poster";
 import Message from "Components/Message";
+import TitlePut from "Components/TitlePut";
 
 const Container = styled("div")`
   width: 100%;
@@ -112,6 +113,7 @@ const Search = () => {
             )}
         </>
       )}
+      <TitlePut title="Search | Movistagram" />
     </Container>
   );
 };
