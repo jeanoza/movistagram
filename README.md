@@ -26,7 +26,7 @@ Github Page : https://jeanoza.github.io/movistagram/
 ## Functions to add
 
 - [ ] IMDB Link
-- [ ] Tabs inside of Movie / Show Details (YT Videos, Production Company & Countries)
+- [ ] Tabs inside of Movie / Show Details (YouTube Videos, Production Company & Countries)
 - [ ] Collections Link
 - [ ] Collections Route
 - [ ] On TV Show, show seasons and creators
@@ -42,5 +42,5 @@ Github Page : https://jeanoza.github.io/movistagram/
 ## Instagram Styling to add
 
 - [ ] Font
-- [ ] Background form
+- [ ] Background form  
 - [ ] Background color
