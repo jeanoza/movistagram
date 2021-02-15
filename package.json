@@ -27,6 +27,7 @@
     "deploy": "gh-pages -d build",
     "predeploy": "yarn run build"
   },
+  "homepage":"https://jeanoza.github.io/movistagram/",
   "eslintConfig": {
     "extends": [
       "react-app"
