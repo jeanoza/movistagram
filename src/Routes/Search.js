@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Loader from "Components/Loader";
 import Section from "Components/Section";
-import Poster from "Components/Poster";
+import { Poster } from "Components/Poster";
 import Message from "Components/Message";
 import TitlePut from "Components/TitlePut";
 

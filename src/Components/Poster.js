@@ -44,7 +44,14 @@ const Year = styled.span`
   color: rgba(255, 255, 255, 0.5);
 `;
 
-const Poster = ({ id, imageUrl, title, rating, year, isMovie = false }) => (
+export const Poster = ({
+  id,
+  imageUrl,
+  title,
+  rating,
+  year,
+  isMovie = false,
+}) => (
   <Link to={isMovie ? `/movie/${id}` : `/show/${id}`}>
     <Container>
       <ImageContainer>
@@ -55,12 +62,14 @@ const Poster = ({ id, imageUrl, title, rating, year, isMovie = false }) => (
               : "https://www.lakeshorechamber.org/wp-content/uploads/2018/07/Photo-Not-Available.png"
           }
         />
-        <Rating>
-          <span role="img" aria-label="rating">
-            ⭐
-          </span>{" "}
-          {rating}/10
-        </Rating>
+        {rating && (
+          <Rating>
+            <span role="img" aria-label="rating">
+              ⭐
+            </span>{" "}
+            {rating}/10
+          </Rating>
+        )}
       </ImageContainer>
       <Title>
         {title.length > 17 ? `${title.substring(0, 17)}...` : title}
@@ -68,6 +77,42 @@ const Poster = ({ id, imageUrl, title, rating, year, isMovie = false }) => (
       <Year>{year}</Year>
     </Container>
   </Link>
+);
+
+export const PosterToCollection = ({ id, imageUrl, title, year }) => (
+  <Link to={`/collection/${id}`}>
+    <Container>
+      <ImageContainer>
+        <Image
+          bgUrl={
+            imageUrl
+              ? `https://image.tmdb.org/t/p/w300/${imageUrl}`
+              : "https://www.lakeshorechamber.org/wp-content/uploads/2018/07/Photo-Not-Available.png"
+          }
+        />
+      </ImageContainer>
+      <Title>
+        {title.length > 17 ? `${title.substring(0, 17)}...` : title}
+      </Title>
+      <Year>{year}</Year>
+    </Container>
+  </Link>
+);
+
+export const PosterSeason = ({ imageUrl, title, year }) => (
+  <Container>
+    <ImageContainer>
+      <Image
+        bgUrl={
+          imageUrl
+            ? `https://image.tmdb.org/t/p/w300/${imageUrl}`
+            : "https://www.lakeshorechamber.org/wp-content/uploads/2018/07/Photo-Not-Available.png"
+        }
+      />
+    </ImageContainer>
+    <Title>{title.length > 17 ? `${title.substring(0, 17)}...` : title}</Title>
+    <Year>{year}</Year>
+  </Container>
 );
 
 Poster.propTypes = {
@@ -78,5 +123,3 @@ Poster.propTypes = {
   year: PropTypes.string,
   isMovie: PropTypes.bool,
 };
-
-export default Poster;

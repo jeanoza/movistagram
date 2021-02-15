@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Loader from "Components/Loader";
 import Section from "Components/Section";
-import Poster from "Components/Poster";
+import { Poster } from "Components/Poster";
 import TitlePut from "Components/TitlePut";
 import { moviesApi } from "api";
 

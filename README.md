@@ -25,11 +25,11 @@ Github Page : https://jeanoza.github.io/movistagram/
 
 ## Functions to add
 
-- [ ] IMDB Link
-- [ ] Tabs inside of Movie / Show Details (YouTube Videos, Production Company & Countries)
-- [ ] Collections Link
-- [ ] Collections Route
-- [ ] On TV Show, show seasons and creators
+- [x] IMDB Link
+- [x] Tabs inside of Movie / Show Details (YouTube Videos, Production Company)
+- [x] Collections Link
+- [x] Collections Route
+- [x] On TV Show, show seasons
 
 ## Class component -> React Hook
 
@@ -37,7 +37,7 @@ Github Page : https://jeanoza.github.io/movistagram/
 - [x] TV
 - [x] Search
 - [x] Detail
-- [ ] Title(Helmet -> document.title) : but to change if better method(like with useEffect...)
+- [x] HtmlTitle(Helmet -> document.title) : but to change if simple & better method(like with useEffect...)
 
 ## Instagram Styling to add
 

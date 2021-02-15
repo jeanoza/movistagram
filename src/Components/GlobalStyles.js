@@ -17,6 +17,11 @@ const GlobalStyles = createGlobalStyle`
         background-color:rgba(20,20,20,1);
         padding-top:50px;
     }
+    div{
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
 `;
 
 export default GlobalStyles;
