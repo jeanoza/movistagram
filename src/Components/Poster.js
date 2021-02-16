@@ -62,14 +62,14 @@ export const Poster = ({
               : "https://www.lakeshorechamber.org/wp-content/uploads/2018/07/Photo-Not-Available.png"
           }
         />
-        {rating && (
+        {rating ? (
           <Rating>
             <span role="img" aria-label="rating">
               ⭐
             </span>{" "}
             {rating}/10
           </Rating>
-        )}
+        ) : null}
       </ImageContainer>
       <Title>
         {title.length > 17 ? `${title.substring(0, 17)}...` : title}

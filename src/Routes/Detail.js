@@ -225,16 +225,25 @@ const Detail = (props) => {
               )}
           </Title>
           <ItemContainer>
-            <Item>
-              {result.release_date
-                ? result.release_date.substring(0, 4)
-                : result.first_air_date.substring(0, 4)}
-            </Item>
-            <Divider>#</Divider>
-            <Item>
-              {result.runtime ? result.runtime : result.episode_run_time} min
-            </Item>
-            <Divider>#</Divider>
+            {(result.release_date || result.first_air_date) && (
+              <>
+                <Item>
+                  {result.release_date
+                    ? result.release_date.substring(0, 4)
+                    : result.first_air_date.substring(0, 4)}
+                </Item>
+                <Divider>#</Divider>
+              </>
+            )}
+            {(result.runtime || result.episode_run_time) && (
+              <>
+                <Item>
+                  {result.runtime ? result.runtime : result.episode_run_time}{" "}
+                  min
+                </Item>
+                <Divider>#</Divider>
+              </>
+            )}
             <Item>
               {result.genres &&
                 result.genres.map((genre, index) =>
@@ -257,11 +266,11 @@ const Detail = (props) => {
             )}
           </ItemContainer>
           <Overview>{result.overview}</Overview>
-          <Tab>
-            <TabTitle>Traillers</TabTitle>
-            <Videos>
-              {videos &&
-                videos.map((video, index) => (
+          {videos && videos.length > 0 && (
+            <Tab>
+              <TabTitle>Traillers</TabTitle>
+              <Videos>
+                {videos.map((video, index) => (
                   <SReactPlayer
                     key={index}
                     url={`https://www.youtube.com/watch?v=${video.key}`}
@@ -270,9 +279,10 @@ const Detail = (props) => {
                     height="320px"
                   />
                 ))}
-            </Videos>
-          </Tab>
-          {result.seasons && (
+              </Videos>
+            </Tab>
+          )}
+          {result.seasons && result.seasons.length > 0 && (
             <Section title="Seasons">
               {result.seasons.map((season, index) => (
                 <PosterSeason

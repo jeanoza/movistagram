@@ -65,7 +65,10 @@ const Search = () => {
   return (
     <Container>
       <Form onSubmit={handleSubmit}>
-        <Input placeholder="Search Movies or TV Shows." onChange={updateTerm} />
+        <Input
+          placeholder="Search Movies or TV Shows..."
+          onChange={updateTerm}
+        />
       </Form>
       {loading ? (
         <Loader />
