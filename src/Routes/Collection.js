@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { moviesApi } from "api";
 import Loader from "Components/Loader";
 import TitlePut from "Components/TitlePut";
@@ -25,6 +25,10 @@ const Cover = styled.div`
   width: 30%;
   height: auto;
   border-radius: 15px;
+  :hover {
+    opacity: 0.5;
+    transition: opacity 0.2s ease-in-out;
+  }
 `;
 
 const Data = styled.div`
