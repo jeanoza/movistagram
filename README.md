@@ -41,6 +41,6 @@ Github Page : https://jeanoza.github.io/movistagram/
 
 ## Instagram Styling to add
 
-- [ ] Font
-- [ ] Background form  
-- [ ] Background color
+- [ ] Font : Where can I take it?
+- [ ] Background color => Cancel: It's not pretty for a Movie App(white color in Movie app...)
+- [x] Search Bar in Header
