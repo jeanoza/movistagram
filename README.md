@@ -44,3 +44,7 @@ Github Page : https://jeanoza.github.io/movistagram/
 - [ ] Font : Where can I take it?
 - [ ] Background color => Cancel: It's not pretty for a Movie App(white color in Movie app...)
 - [x] Search Bar in Header
+
+## Responsive Screen(with @media in styled component)
+- [x] mobile : iphone SE, 6,7,8(375px), X(414px)
+- [x] tablette : iPad(768px)
