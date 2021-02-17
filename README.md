@@ -6,17 +6,19 @@ Github Page : https://jeanoza.github.io/movistagram/
 
 ## ScreenShot
 
-### Home Page
+### Movie(Home) Page
 
-<img src="https://user-images.githubusercontent.com/64304902/108257957-cc65fd80-715f-11eb-852b-b3b4ebeb930a.png" width="400" height="auto"/>
+<img src="https://user-images.githubusercontent.com/64304902/108257957-cc65fd80-715f-11eb-852b-b3b4ebeb930a.png" width="500" height="auto"/>
 
-![moviePage](https://user-images.githubusercontent.com/64304902/108257957-cc65fd80-715f-11eb-852b-b3b4ebeb930a.png)
-
-![tvPage](https://user-images.githubusercontent.com/64304902/108258039-e8699f00-715f-11eb-904e-641bedf63697.png)
+### TV Show Page
 
 ![detailPage](https://user-images.githubusercontent.com/64304902/108258088-f8817e80-715f-11eb-8a2f-e2325bd6a01d.png)
 
+### Search Page
+
 ![searchPage](https://user-images.githubusercontent.com/64304902/108258102-fcad9c00-715f-11eb-87e7-847e504ee2b9.png)
+
+### Collection Page
 
 ![collectionPage](https://user-images.githubusercontent.com/64304902/108258111-fe775f80-715f-11eb-952b-6942cc5b5e9e.png)
 
