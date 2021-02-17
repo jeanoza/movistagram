@@ -6,6 +6,7 @@ Github Page : https://jeanoza.github.io/movistagram/
 
 ## ScreenShot
 <img src="https://user-images.githubusercontent.com/64304902/108257957-cc65fd80-715f-11eb-852b-b3b4ebeb930a.png" width="400" height="300"/>
+
 ![moviePage](https://user-images.githubusercontent.com/64304902/108257957-cc65fd80-715f-11eb-852b-b3b4ebeb930a.png)
 
 ![tvPage](https://user-images.githubusercontent.com/64304902/108258039-e8699f00-715f-11eb-904e-641bedf63697.png)
