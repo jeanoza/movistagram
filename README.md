@@ -8,7 +8,7 @@ Github Page : https://jeanoza.github.io/movistagram/
 
 ### Movie(Home) Page
 
-<img src="https://user-images.githubusercontent.com/64304902/108257957-cc65fd80-715f-11eb-852b-b3b4ebeb930a.png" width="500" height="auto"/>
+![moviePage](https://user-images.githubusercontent.com/64304902/108257957-cc65fd80-715f-11eb-852b-b3b4ebeb930a.png)
 
 ### TV Show Page
 
