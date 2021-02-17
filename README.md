@@ -5,7 +5,7 @@ Project for learning React and ES6 by building a Movie Discovery App with the In
 Github Page : https://jeanoza.github.io/movistagram/
 
 ## ScreenShot
-<img src="https://user-images.githubusercontent.com/64304902/108257957-cc65fd80-715f-11eb-852b-b3b4ebeb930a.png" width="400" height="300"/>
+<img src="https://user-images.githubusercontent.com/64304902/108257957-cc65fd80-715f-11eb-852b-b3b4ebeb930a.png" width="400" height="auto"/>
 
 ![moviePage](https://user-images.githubusercontent.com/64304902/108257957-cc65fd80-715f-11eb-852b-b3b4ebeb930a.png)
 
