@@ -11,6 +11,9 @@ const Container = styled.div`
   width: 100%;
   position: relative;
   padding: 50px;
+  @media (max-width: 414px) {
+    padding: 10px;
+  }
 `;
 const Content = styled.div`
   display: flex;
@@ -29,11 +32,17 @@ const Cover = styled.div`
     opacity: 0.5;
     transition: opacity 0.2s ease-in-out;
   }
+  @media (max-width: 414px) {
+    display: none;
+  }
 `;
 
 const Data = styled.div`
   width: 70%;
   margin-left: 10px;
+  @media (max-width: 414px) {
+    width: 95%;
+  }
 `;
 
 const Title = styled.h3`

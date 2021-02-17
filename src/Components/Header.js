@@ -16,6 +16,9 @@ const Header = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 0px 20px;
+  @media (max-width: 414px) {
+    padding: 0px;
+  }
 
   background-color: rgba(20, 20, 20, 0.9);
   box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, 0.8);
@@ -45,14 +48,25 @@ const Form = styled.form`
   justify-content: space-between;
   width: 20%;
   font-size: 16px;
+  @media (max-width: 414px) {
+    width: 90%;
+    font-size: 14px;
+  }
+  @media (max-width: 768px) {
+    width: 40%;
+  }
 `;
 const Input = styled.input`
   all: unset;
   width: 90%;
 `;
 const Title = styled.span`
-  width: 20%;
+  /* width: 20%; */
   font-size: 20px;
+  @media (max-width: 414px) {
+    width: 0%;
+    display: none;
+  }
 `;
 export default withRouter(({ location: { pathname }, history }) => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -71,11 +85,11 @@ export default withRouter(({ location: { pathname }, history }) => {
   return (
     <Header>
       <Link to="/">
-        <Title>Movistagram</Title>
+        <Title>𝓜𝓸𝓿𝓲𝓼𝓽𝓪𝓰𝓻𝓪𝓶</Title>
       </Link>
       <Form onSubmit={handleSubmit}>
         <FontAwesomeIcon icon={faSearch} size="1x" />
-        <Input onChange={updateTerm} placeholder="Search movie or TV show..." />
+        <Input onChange={updateTerm} placeholder="Search movie or TV..." />
       </Form>
       <List>
         <Item current={pathname === "/"}>

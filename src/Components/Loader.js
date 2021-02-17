@@ -5,12 +5,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 const Container = styled.div`
+  position: absolute;
+  top: 0;
   height: 100vh;
   width: 100vw;
   display: flex;
   justify-content: center;
+  align-items: center;
   font-size: 28px;
-  margin-top: 20px;
 `;
 
 export default () => (

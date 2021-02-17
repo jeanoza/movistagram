@@ -4,7 +4,6 @@ import { moviesApi, tvApi } from "api";
 import React, { useState, useEffect } from "react";
 import TitlePut from "Components/TitlePut";
 import ReactPlayer from "react-player/youtube";
-import { Link } from "react-router-dom";
 import Section from "Components/Section";
 import { PosterToCollection, PosterSeason } from "Components/Poster";
 
@@ -13,6 +12,9 @@ const Container = styled.div`
   width: 100%;
   position: relative;
   padding: 50px;
+  @media (max-width: 414px) {
+    padding: 10px;
+  }
 `;
 const Content = styled.div`
   display: flex;
@@ -25,11 +27,13 @@ const Cover = styled.div`
   background-image: url(${(props) => props.bgImage});
   background-size: 100%;
   width: 30%;
-  height: auto;
   border-radius: 15px;
   :hover {
     opacity: 0.5;
     transition: opacity 0.2s ease-in-out;
+  }
+  @media (max-width: 414px) {
+    display: none;
   }
 `;
 
@@ -38,6 +42,9 @@ const Data = styled.div`
   height: 100%;
   overflow-y: scroll;
   margin-left: 10px;
+  @media (max-width: 414px) {
+    width: 95%;
+  }
 `;
 
 const Title = styled.h3`
@@ -275,8 +282,8 @@ const Detail = (props) => {
                     key={index}
                     url={`https://www.youtube.com/watch?v=${video.key}`}
                     controls
-                    width="480px"
-                    height="320px"
+                    width="328px"
+                    height="240px"
                   />
                 ))}
               </Videos>
