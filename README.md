@@ -29,6 +29,7 @@ Github Page : https://jeanoza.github.io/movistagram/
 - [x] Tabs inside of Movie / Show Details (YouTube Videos, Production Company)
 - [x] Collections Link
 - [x] Collections Route
+- [ ] Collections Big photo when hover(mouseEnter) : how can I bring "ref" in another component?
 - [x] On TV Show, show seasons
 
 ## Class component -> React Hook
@@ -42,7 +43,7 @@ Github Page : https://jeanoza.github.io/movistagram/
 ## Instagram Styling to add
 
 - [ ] Font : Where can I take it?
-- [ ] Background color => Cancel: It's not pretty for a Movie App(white color in Movie app...)
+- [x] Background color : It's not pretty for a Movie App(white color in Movie app...) => Cancel.
 - [x] Search Bar in Header
 
 ## Responsive Screen(with @media in styled component)

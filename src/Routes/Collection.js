@@ -126,15 +126,15 @@ export default ({
                 />
               ))}
           </Section>
-          <CollectionHover>
-            {/* See detail of poster selected */}
+          {/* <CollectionHover>
+            <div>See detail of poster selected</div>
             <div>big poster</div>
             <div>
               <div>genre(getDetail by id)</div>
               <div>year</div>
               <div>description(getDetail by id)</div>
             </div>
-          </CollectionHover>
+          </CollectionHover> */}
         </Data>
       </Content>
       <TitlePut title={collection.name} />
