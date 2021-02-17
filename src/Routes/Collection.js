@@ -61,6 +61,12 @@ const Overview = styled.p`
   width: 100%;
   margin-bottom: 20px;
 `;
+const CollectionHover = styled.div`
+  width: 50%;
+  display: flex;
+  font-size: 30px;
+  justify-content: space-around;
+`;
 
 export default ({
   match: {
@@ -111,6 +117,15 @@ export default ({
                 />
               ))}
           </Section>
+          <CollectionHover>
+            {/* See detail of poster selected */}
+            <div>big poster</div>
+            <div>
+              <div>genre(getDetail by id)</div>
+              <div>year</div>
+              <div>description(getDetail by id)</div>
+            </div>
+          </CollectionHover>
         </Data>
       </Content>
       <TitlePut title={collection.name} />

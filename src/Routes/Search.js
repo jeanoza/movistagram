@@ -1,5 +1,5 @@
 import { moviesApi, tvApi } from "api";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Loader from "Components/Loader";
 import Section from "Components/Section";
@@ -21,28 +21,16 @@ const Input = styled("input")`
   font-size: 28px;
 `;
 
-const Search = () => {
+const Search = ({
+  match: {
+    params: { searchTerm },
+  },
+}) => {
   const [movieResults, setMovieResults] = useState(null);
   const [tvResults, setTvResults] = useState(null);
-  const [searchTerm, setSearchTerm] = useState("");
+  // const [searchTerm, setSearchTerm] = useState(word);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    if (searchTerm !== "") {
-      searchByTerm();
-      //   console.log(searchTerm);
-    }
-  };
-
-  const updateTerm = (event) => {
-    const {
-      target: { value },
-    } = event;
-    setSearchTerm(value);
-  };
-
   const searchByTerm = async () => {
     setLoading(true);
     try {
@@ -61,64 +49,56 @@ const Search = () => {
       setLoading(false);
     }
   };
+  useEffect(() => {
+    searchByTerm();
+  }, [searchTerm]);
 
-  return (
+  return loading ? (
+    <Loader />
+  ) : (
     <Container>
-      <Form onSubmit={handleSubmit}>
-        <Input
-          placeholder="Search Movies or TV Shows..."
-          onChange={updateTerm}
-        />
-      </Form>
-      {loading ? (
-        <Loader />
-      ) : (
-        <>
-          {movieResults && movieResults.length > 0 && (
-            <Section title="Movie Results">
-              {movieResults.map((movie) => (
-                <Poster
-                  key={movie.id}
-                  id={movie.id}
-                  title={movie.title}
-                  imageUrl={movie.poster_path}
-                  rating={movie.vote_average}
-                  yaer={
-                    movie.release_date && movie.release_date.substring(0, 4)
-                  }
-                  isMovie={true}
-                />
-              ))}
-            </Section>
+      <>
+        {movieResults && movieResults.length > 0 && (
+          <Section title="Movie Results">
+            {movieResults.map((movie) => (
+              <Poster
+                key={movie.id}
+                id={movie.id}
+                title={movie.title}
+                imageUrl={movie.poster_path}
+                rating={movie.vote_average}
+                yaer={movie.release_date && movie.release_date.substring(0, 4)}
+                isMovie={true}
+              />
+            ))}
+          </Section>
+        )}
+        {tvResults && tvResults.length > 0 && (
+          <Section title="TV Show Results">
+            {tvResults.map((show) => (
+              <Poster
+                key={show.id}
+                id={show.id}
+                title={show.name}
+                imageUrl={show.poster_path}
+                rating={show.vote_average}
+                year={
+                  show.first_air_date && show.first_air_date.substring(0, 4)
+                }
+              />
+            ))}
+          </Section>
+        )}
+        {error && <Message color="#ee5253" text={error} />}
+        {tvResults &&
+          movieResults &&
+          tvResults.length === 0 &&
+          movieResults.length === 0 && (
+            <Message text="Nothing found" color="#8395a7" />
           )}
-          {tvResults && tvResults.length > 0 && (
-            <Section title="TV Show Results">
-              {tvResults.map((show) => (
-                <Poster
-                  key={show.id}
-                  id={show.id}
-                  title={show.name}
-                  imageUrl={show.poster_path}
-                  rating={show.vote_average}
-                  year={
-                    show.first_air_date && show.first_air_date.substring(0, 4)
-                  }
-                />
-              ))}
-            </Section>
-          )}
-          {error && <Message color="#ee5253" text={error} />}
-          {tvResults &&
-            movieResults &&
-            tvResults.length === 0 &&
-            movieResults.length === 0 && (
-              <Message text="Nothing found" color="#8395a7" />
-            )}
-        </>
-      )}
+      </>
       <TitlePut title="Search | Movistagram" />
     </Container>
   );
 };
-
 export default Search;
